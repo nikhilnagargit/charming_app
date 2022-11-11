@@ -331,4 +331,59 @@ main .container .left .profile {
   margin-right: 1rem;
 }
 
+/* feeds */
+
+.middle .feeds .feed {
+  padding: var(--card-padding);
+  width: 100%;
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  /* line-height: 1.2rem; */
+}
+.middle .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .feed .head .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.middle .feed .photo {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.middle .feed .action-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.middle .feed .liked-by {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.feed .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  overflow: hidden;
+  margin-left: -0.6rem;
+}
+.feed .liked-by span:first-child {
+  margin: 0;
+}
+.feed .liked-by p {
+  margin-left: 0.5rem;
+}
 /* ==================== Middle: end================== */
