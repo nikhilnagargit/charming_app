@@ -309,6 +309,26 @@ main .container .left .profile {
   background: url("./images/story-5.jpg") no-repeat center/cover;
 }
 
-/*  */
+/* create post */
+
+.middle .create-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"] {
+  justify-self: start;
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
 
 /* ==================== Middle: end================== */
