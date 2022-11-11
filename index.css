@@ -2,14 +2,19 @@
 
 /* General CSS */
 :root {
-  --color-white: hsl(252, 30%, 100%);
-  --color-light: hsl(252, 30%, 95%);
+  --light-color-lightness: 95%;
+  --dark-color-lightness: 5%;
+  --primary-color-hue: 252;
+  --white-color-lightness: 100%;
+
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
+  --color-light: hsl(252, 30%, var(--light-color-lightness));
   --color-gray: hsl(252, 15%, 65%);
-  --color-primary: hsl(252, 75%, 60%);
+  --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
   --color-danger: hsl(0, 95%, 65%);
-  --color-dark: hsl(252, 30%, 17%);
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
   --color-black: hsl(252, 30%, 10%);
 
   --border-radius: 2rem;
@@ -19,7 +24,7 @@
   --card-padding: 1rem;
 
   --sticky-top-left: 5.4rem;
-  --sticky-top-right: 5.4rem;
+  --sticky-top-right: -18rem;
 }
 
 *,
@@ -35,6 +40,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
   color: var(--color-dark);
   background: var(--color-light);
   overflow-x: hidden;
@@ -224,7 +230,7 @@ main .container .left .profile {
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
   box-shadow: 0 0 2rem hsl(var(--color-primary), 75%, 60% 25%);
-  z-index: 8;
+  z-index: 120;
 }
 
 .left .notifications-popup::before {
@@ -515,6 +521,7 @@ main .container .right {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 /* fontsize */
 .customize-theme .font-size {
@@ -662,6 +669,9 @@ main .container .right {
   .left .btn {
     display: none;
   }
+  .customize-theme .card {
+    width: 80vw;
+  }
 }
 
 /* ================== MEDIA QUERIES for mobile size ========================== */
@@ -697,5 +707,8 @@ main .container .right {
   }
   main .container .right {
     display: none;
+  }
+  .customize-theme .card {
+    width: 92vw;
   }
 }
